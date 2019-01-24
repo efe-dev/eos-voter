@@ -68,7 +68,21 @@ class WalletPanelUnlocked extends Component<Props> {
                   {(chain
                     && chain.hasOwnProperty('distributionPeriodInfo')
                     && chain.distributionPeriodInfo.beosDistribution) ?
-                    false
+                      <div data-tooltip="Function will be enabled after distribution period" data-position="bottom center">
+                        <Segment>
+                          <WalletPanelButtonStake
+                            actions={actions}
+                            accounts={accounts}
+                            balances={balances}
+                            blockExplorers={blockExplorers}
+                            connection={connection}
+                            validate={validate}
+                            settings={settings}
+                            system={system}
+                            disabled={true}
+                          />
+                        </Segment>
+                      </div>
                     : (
                       <Segment>
                         <WalletPanelButtonStake
@@ -80,6 +94,7 @@ class WalletPanelUnlocked extends Component<Props> {
                           validate={validate}
                           settings={settings}
                           system={system}
+                          disabled={false}
                         />
                       </Segment>
                     )
@@ -102,7 +117,21 @@ class WalletPanelUnlocked extends Component<Props> {
                   {(chain
                     && chain.hasOwnProperty('distributionPeriodInfo')
                     && chain.distributionPeriodInfo.ramDistribution) ?
-                    false
+                      <div data-tooltip="Function will be enabled after distribution period" data-position="bottom center">
+                        <Segment>
+                          <WalletPanelButtonRamBuy
+                            account={accounts[settings.account]}
+                            actions={actions}
+                            balances={balances}
+                            blockExplorers={blockExplorers}
+                            connection={connection}
+                            globals={globals}
+                            settings={settings}
+                            system={system}
+                            disabled={true}
+                          />
+                        </Segment>
+                      </div>
                     : (
                       <Segment>
                         <WalletPanelButtonRamBuy
@@ -114,6 +143,7 @@ class WalletPanelUnlocked extends Component<Props> {
                           globals={globals}
                           settings={settings}
                           system={system}
+                          disabled={false}
                         />
                       </Segment>
                     )
@@ -121,7 +151,21 @@ class WalletPanelUnlocked extends Component<Props> {
                   {(chain
                     && chain.hasOwnProperty('distributionPeriodInfo')
                     && chain.distributionPeriodInfo.ramDistribution) ?
-                    false
+                      <div data-tooltip="Function will be enabled after distribution period" data-position="bottom center">
+                        <Segment>
+                          <WalletPanelButtonRamSell
+                            account={accounts[settings.account]}
+                            actions={actions}
+                            balances={balances}
+                            blockExplorers={blockExplorers}
+                            connection={connection}
+                            globals={globals}
+                            settings={settings}
+                            system={system}
+                            disabled={true}
+                          />
+                        </Segment>
+                      </div>
                     : (
                       <Segment>
                         <WalletPanelButtonRamSell
@@ -133,6 +177,7 @@ class WalletPanelUnlocked extends Component<Props> {
                           globals={globals}
                           settings={settings}
                           system={system}
+                          disabled={false}
                         />
                       </Segment>
                     )
