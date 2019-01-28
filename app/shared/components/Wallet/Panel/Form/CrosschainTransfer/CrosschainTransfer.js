@@ -88,7 +88,7 @@ class WalletPanelCrosschainTransfer extends Component<Props> {
       return;
     }
 
-    const url = "https://blocktrades.syncad.com/api/v2";
+    const url = "https://gateway.beos.world/api/v2";
     const validationUrl = `${url}/wallets/beos/address-validator?address=${value}`;
     try {
       const response = await fetch(validationUrl);
