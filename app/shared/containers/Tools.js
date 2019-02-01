@@ -50,6 +50,7 @@ import * as StakeActions from '../actions/stake';
 import * as SystemStateActions from '../actions/system/systemstate';
 import * as TableActions from '../actions/table';
 import * as TransactionActions from '../actions/transaction';
+import * as TransferActions from '../actions/transfer';
 import * as UnregProxyActions from '../actions/system/unregproxy';
 import * as UpdateAuthActions from '../actions/system/updateauth';
 import * as WalletActions from '../actions/wallet';
@@ -385,6 +386,7 @@ function mapDispatchToProps(dispatch) {
       ...TableActions,
       ...ToolsHardwareLedger,
       ...TransactionActions,
+      ...TransferActions,
       ...UnregProxyActions,
       ...UpdateAuthActions,
       ...WalletActions,
