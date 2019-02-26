@@ -16,6 +16,7 @@ class TabMenu extends Component<Props> {
     const {
       actions,
       activeItem,
+      connection,
       handleItemClick,
       locked,
       settings,
@@ -35,6 +36,15 @@ class TabMenu extends Component<Props> {
               <GlobalBlockchainDropdown />
               <GlobalAccountDropdown />
             </React.Fragment>
+          )
+          : false
+        }
+        {(!settings.walletInit && connection && connection.chain)
+          ? (
+            <Menu.Item
+              name="chain"
+              content={connection.chain}
+            />
           )
           : false
         }
